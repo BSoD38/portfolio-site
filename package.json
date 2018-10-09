@@ -1,0 +1,16 @@
+{
+    "name": "portfolio",
+    "version": "1.0.0",
+    "description": "My portfolio website",
+    "dependencies": {
+      "sass": "*"
+    },
+    "engines": {
+      "node": "8.0.0"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/BSoD38/portfolio-site"
+    },
+    "author": "Liam Powell"
+  }

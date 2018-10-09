@@ -9,7 +9,7 @@ function switchTheme(element){
 }
 
 $(function(){
-    if($(window).scrollTop()== 0){
+    if($(window).scrollTop() == 0){
         $("#backtop").hide();
     } else {
         $("#backtop").show();
@@ -43,7 +43,7 @@ $("#backtop").click(function(e){
 });
 
 $(window).scroll(function () {
-    if($(window).scrollTop()== 0){
+    if($(window).scrollTop() == 0){
         $("#backtop").hide();
     } else {
         $("#backtop").show();
