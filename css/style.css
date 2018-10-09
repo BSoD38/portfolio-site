@@ -1,0 +1,132 @@
+body{
+    transition: all ease-in-out 0.5s;
+}
+
+#box{
+    align-content: center;
+    width: 90%;
+    margin: 10px auto;
+    background-color: transparent;
+}
+
+.containers{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px;
+    transition: all ease-in-out 0.5s;
+}
+
+#picture{
+    margin-top: 20px;
+    height: 300px;
+    border-radius: 50%;
+    transition: all ease-in-out 0.5s;
+}
+
+#picture.dark{
+    filter: invert(90%);
+}
+
+#picture.light{
+    filter: invert(0%);
+}
+
+ul{
+    text-align: left;
+}
+
+li{
+    margin: 5px;
+}
+
+#switchmode{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    transition: all ease-in-out 0.5s;
+}
+
+#backtop{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    transition: all ease-in-out 0.5s;
+}
+
+.light .containers{
+    color: black;
+    background: rgb(235, 235, 235);
+}
+
+.dark .containers{
+    color: lightgray;
+    background: rgb(49, 49, 49);
+}
+
+body.light{
+    background-image: rgb(180, 180, 180);
+    background-repeat: no-repeat;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: 100%;
+    z-index: -100;
+    opacity: 1;
+}
+
+body.light:before{
+    background-image: #444444;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: 100%;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+body.dark{
+    background-image: #444444;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: 100%;
+    z-index: 100;
+    opacity: 1;
+}
+
+body.dark:before{
+    background-image: rgb(180, 180, 180);
+    background-repeat: no-repeat;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: 100%;
+    z-index: -100;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.textblock{
+    padding: 10px;
+}
+
+.btn{
+    text-align: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border: none;
+    transition: all ease-in-out 0.5s;
+    border-radius: 5px;
+}
+
+.btn.light{
+    color: white;
+    background-color: rgb(49, 49, 49);
+}
+
+.btn.dark{
+    color: black;
+    background-color: lightgray;
+}
