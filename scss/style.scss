@@ -1,9 +1,10 @@
-$darkmode-shade1: #444444;
+$darkmode-shade1: #555555;
 $darkmode-shade2: rgb(49, 49, 49);
 $lightmode-shade1: rgb(180, 180, 180);
 $lightmode-shade2: rgb(235, 235, 235);
 
 body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     transition: all ease-in-out 0.5s;
 }
 
@@ -15,7 +16,6 @@ body{
 }
 
 .containers{
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center;
     margin: 10px;
     border-radius: 10px;
@@ -88,6 +88,7 @@ body.dark{
 }
 
 .btn{
+    cursor: pointer;
     text-align: center;
     padding: 12px 20px;
     text-decoration: none;

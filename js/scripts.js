@@ -27,11 +27,11 @@ $("#switchmode").click(function (e) {
     });
 
     if($("#switchmode").hasClass("light")){
-        $("#switchicon").text(" Dark mode");
+        $("#switchtext").text(" Dark mode");
         $("#switchicon").removeClass("fa-sun");
         $("#switchicon").addClass("fa-moon");
     } else {
-        $("#switchicon").text(" Light mode");
+        $("#switchtext").text(" Light mode");
         $("#switchicon").removeClass("fa-moon");
         $("#switchicon").addClass("fa-sun");
     }
