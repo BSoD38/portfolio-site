@@ -103,7 +103,15 @@ body.dark{
     background-color: $darkmode-shade2;
 }
 
+.btn.light:hover{
+    background-color: $darkmode-shade1;
+}
+
 .btn.dark{
     color: black;
     background-color: $lightmode-shade2;
+}
+
+.btn.dark:hover{
+    background-color: $lightmode-shade1;
 }
