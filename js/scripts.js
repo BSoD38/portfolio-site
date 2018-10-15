@@ -41,7 +41,6 @@ $("#backtop").click(function(e){
     $('html, body').animate({
         scrollTop: 0
     }, 1000);
-    return false;
 });
 
 $(window).scroll(function () {

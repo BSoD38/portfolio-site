@@ -61,9 +61,6 @@ li {
   position: fixed;
   right: 10px;
   top: 10px;
-  -webkit-transition: all ease-in-out 0.5s;
-  -o-transition: all ease-in-out 0.5s;
-  transition: all ease-in-out 0.5s;
 }
 
 #backtop {
@@ -74,6 +71,7 @@ li {
 
 #backtop.hidden {
   transform: translateY(70px);
+  filter: blur(30px);
   opacity: 0;
 }
 
