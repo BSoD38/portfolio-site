@@ -10,9 +10,9 @@ function switchTheme(element){
 
 $(function(){
     if($(window).scrollTop() == 0){
-        $("#backtop").hide();
+        $("#backtop").addClass("hidden");
     } else {
-        $("#backtop").show();
+        $("#backtop").removeClass("hidden");
     }
 }
 );
@@ -38,14 +38,16 @@ $("#switchmode").click(function (e) {
 });
 
 $("#backtop").click(function(e){
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    $('html, body').animate({
+        scrollTop: 0
+    }, 1000);
+    return false;
 });
 
 $(window).scroll(function () {
     if($(window).scrollTop() == 0){
-        $("#backtop").hide();
+        $("#backtop").addClass("hidden");
     } else {
-        $("#backtop").show();
+        $("#backtop").removeClass("hidden");
     }
 });

@@ -75,9 +75,11 @@ li{
     position: fixed;
     right: 10px;
     bottom: 10px;
-    -webkit-transition: all ease-in-out 0.5s;
-    -o-transition: all ease-in-out 0.5s;
-    transition: all ease-in-out 0.5s;
+}
+
+#backtop.hidden{
+    transform: translateY(70px);
+    opacity: 0;
 }
 
 .light .containers{
@@ -139,4 +141,8 @@ body.dark{
 
 .btn.dark:hover{
     background-color: $lightmode-shade1;
+}
+
+.sectionicon{
+    font-size: 2em;
 }
