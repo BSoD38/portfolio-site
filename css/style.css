@@ -72,6 +72,7 @@ li {
 #backtop.hidden {
   transform: translateY(70px);
   filter: blur(30px);
+  -webkit-filter: blur(30px);
   opacity: 0;
 }
 
