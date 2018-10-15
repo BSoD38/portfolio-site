@@ -1,10 +1,21 @@
+function switchTheme2(element, direction){
+    element.removeClass("dusk");
+    if(direction){
+        element.addClass("dark");
+    } else {
+        element.addClass("light");
+    }
+}
+
 function switchTheme(element){
     if(element.hasClass("light")){
         element.removeClass("light");
-        element.addClass("dark");
+        element.addClass("dusk");
+        setTimeout(switchTheme2, 200, element, true);
     } else {
         element.removeClass("dark");
-        element.addClass("light");
+        element.addClass("dusk");
+        setTimeout(switchTheme2, 200, element, false);
     }
 }
 

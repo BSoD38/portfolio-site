@@ -2,6 +2,7 @@ $darkmode-shade1: #555555;
 $darkmode-shade2: rgb(49, 49, 49);
 $lightmode-shade1: rgb(180, 180, 180);
 $lightmode-shade2: rgb(235, 235, 235);
+$duskmode-shade: rgb(71, 55, 47);
 
 @font-face{
     font-family: ankeFont;
@@ -13,6 +14,9 @@ body{
     -webkit-transition: all ease-in-out 0.5s;
     -o-transition: all ease-in-out 0.5s;
     transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-attachment: fixed;
 }
 
 #box{
@@ -93,16 +97,14 @@ li{
 
 body.light{
     background: $lightmode-shade1;
-    background-repeat: no-repeat;
-    height: 100%;
-    background-attachment: fixed;
+}
+
+body.dusk{
+    background: peachpuff;
 }
 
 body.dark{
     background: $darkmode-shade1;
-    background-repeat: no-repeat;
-    height: 100%;
-    background-attachment: fixed;
 }
 
 .textblock{

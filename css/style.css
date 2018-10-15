@@ -8,6 +8,9 @@ body {
   -webkit-transition: all ease-in-out 0.5s;
   -o-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-attachment: fixed;
 }
 
 #box {
@@ -88,16 +91,14 @@ li {
 
 body.light {
   background: #b4b4b4;
-  background-repeat: no-repeat;
-  height: 100%;
-  background-attachment: fixed;
+}
+
+body.dusk {
+  background: peachpuff;
 }
 
 body.dark {
   background: #555555;
-  background-repeat: no-repeat;
-  height: 100%;
-  background-attachment: fixed;
 }
 
 .textblock {
