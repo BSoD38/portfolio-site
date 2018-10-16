@@ -16,7 +16,7 @@ $(function(){
     }
     $.getJSON('https://json.geoiplookup.io/', function(data) {
         $.ajax({
-            url: "http://api.openweathermap.org/data/2.5/weather?q=" + data.city + "," + data.country_code + "&appid=989c42344ea2700f01c6e5a0819d3d61" + "&units=metric",
+            url: "https://api.openweathermap.org/data/2.5/weather?q=" + data.city + "," + data.country_code + "&appid=989c42344ea2700f01c6e5a0819d3d61" + "&units=metric",
             success: function(res){
                 $("#weather-loading").remove();
                 $("#weather-loaded").show();
@@ -30,7 +30,7 @@ $(function(){
             }
         })
       });
-}
+    }
 );
 
 $("#switchmode").click(function (e) {
