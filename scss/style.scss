@@ -20,7 +20,6 @@ $lightmode-shade2: rgb(235, 235, 235);
 body {
   font-family: ankeFont, serif;
   -webkit-transition: all ease-in-out 0.5s;
-  -o-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s;
 }
 
@@ -36,7 +35,6 @@ body {
   margin: 10px;
   border-radius: 10px;
   -webkit-transition: all ease-in-out 0.5s;
-  -o-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s;
 }
 
@@ -46,15 +44,13 @@ body {
   width: auto;
   max-width: 100%;
   max-height: 300px;
-  border-radius: 50%;
   -webkit-transition: all ease-in-out 0.5s;
-  -o-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s;
 }
 
 #picture.dark {
-  -webkit-filter: invert(81%);
-  filter: invert(81%);
+  -webkit-filter: invert(90%);
+  filter: invert(90%);
 }
 
 #picture.light {
@@ -95,7 +91,7 @@ li {
 }
 
 .dark .containers {
-  color: lightgray;
+  color: #ebebeb;
   background: $darkmode-shade2;
 }
 
