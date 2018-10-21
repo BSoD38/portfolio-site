@@ -20,7 +20,7 @@ $(function () {
                 success: function (res) {
                     $("#location-city").text(data.city);
                     $("#location-country").text(data.country_name);
-                    $("#weather").text(res.weather[0].description);
+                    $("#weather").text(res.weather[0].description.charAt(0).toUpperCase() + res.weather[0].description.substr(1));
                     $("#temperature").text(res.main.temp);
                     $("#weather-loading").remove();
                     $("#weather-loaded").show();
