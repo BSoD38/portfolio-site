@@ -3,31 +3,35 @@ $darkmode-shade2: rgb(49, 49, 49);
 $lightmode-shade1: rgb(180, 180, 180);
 $lightmode-shade2: rgb(235, 235, 235);
 
-@font-face{
+@font-face {
   font-family: ankeFont;
   src: url(../webfonts/Anke.woff2);
 }
 
-@keyframes flash{
-  from{opacity: 0.4;}
-  to{opacity: 1;}
+@keyframes flash {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-body{
+body {
   font-family: ankeFont, serif;
   -webkit-transition: all ease-in-out 0.5s;
   -o-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s;
 }
 
-#box{
+#box {
   align-content: center;
   width: 90%;
   margin: 30px auto;
   background-color: transparent;
 }
 
-.containers{
+.containers {
   text-align: center;
   margin: 10px;
   border-radius: 10px;
@@ -36,7 +40,7 @@ body{
   transition: all ease-in-out 0.5s;
 }
 
-#picture{
+#picture {
   margin-top: 20px;
   height: auto;
   width: auto;
@@ -48,80 +52,80 @@ body{
   transition: all ease-in-out 0.5s;
 }
 
-#picture.dark{
+#picture.dark {
   -webkit-filter: invert(81%);
   filter: invert(81%);
 }
 
-#picture.light{
+#picture.light {
   -webkit-filter: invert(8%);
   filter: invert(8%);
 }
 
-ul{
+ul {
   text-align: left;
 }
 
-li{
+li {
   margin: 5px;
 }
 
-#switchmode{
+#switch-mode {
   position: fixed;
   right: 10px;
   top: 10px;
 }
 
-#backtop{
+#back-top {
   position: fixed;
   right: 10px;
   bottom: 10px;
 }
 
-#backtop.hidden{
+#back-top.hidden {
   transform: translateY(70px);
   filter: blur(30px);
   -webkit-filter: blur(30px);
   opacity: 0;
 }
 
-.light .containers{
+.light .containers {
   color: black;
   background: $lightmode-shade2;
 }
 
-.dark .containers{
+.dark .containers {
   color: lightgray;
   background: $darkmode-shade2;
 }
 
-body.light{
+body.light {
   background: $lightmode-shade1;
   background-repeat: no-repeat;
   height: 100%;
   background-attachment: fixed;
 }
 
-body.dark{
+body.dark {
   background: $darkmode-shade1;
   background-repeat: no-repeat;
   height: 100%;
   background-attachment: fixed;
 }
 
-.textblock{
+.textblock {
   padding: 10px;
 }
 
-.textblock p{
+.textblock p {
   font-size: 1.1em;
 }
 
-.textblock ul{
+.textblock ul {
   font-size: 1.15em;
 }
 
-.btn{
+.btn {
   cursor: pointer;
   text-align: center;
   padding: 12px 20px;
@@ -136,29 +140,29 @@ body.dark{
   z-index: 100;
 }
 
-.btn.light{
+.btn.light {
   color: white;
   background-color: $darkmode-shade2;
 }
 
-.btn.light:hover{
+.btn.light:hover {
   background-color: $darkmode-shade1;
 }
 
-.btn.dark{
+.btn.dark {
   color: black;
   background-color: $lightmode-shade2;
 }
 
-.btn.dark:hover{
+.btn.dark:hover {
   background-color: $lightmode-shade1;
 }
 
-.sectionicon{
+.sectionicon {
   font-size: 3em;
 }
 
-#weather-loading{
+#weather-loading {
   animation-name: flash;
   animation-direction: alternate;
   animation-duration: 0.4s;

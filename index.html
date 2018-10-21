@@ -1,109 +1,116 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Portfolio</title>
-        <link rel="icon" href="./img/favicon.png"/>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="./js/jquery-3.3.1.min.js"></script>
-        <link rel="stylesheet" href="css/all.min.css">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body class="light intro">
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <button type="button" id="switchmode" class="btn light"><span id="switchicon" class="fas fa-moon"></span><span id="switchtext"> Dark mode</span></button>
-        <button type="button" id="backtop" class="btn light hidden"><span id="topicon" class="fas fa-arrow-up"></span> Back to top</button>
-        <div id="box" class="light">
-            <div class="containers">
-                <div class="textblock">
-                    <span class="fab fa-wolf-pack-battalion sectionicon"></span>
-                    <h1>Hello there! I'm Liam Powell, a mobile and web developer.</h1>
-                    <p>This is my portfolio. You'll find information about me there.</p>
-                    <p><img id="picture" src="img/picture.png" alt="This is me." class="light intro"></p>
-                </div>
-            </div>
-            <div class="containers">
-                <div class="textblock">
-                    <span class="fas fa-user-circle sectionicon"></span>
-                    <h2>Personal info</h2>
-                    <p>General info about me.</p>
-                    <hr>
-                    <p>
-                        <ul>
-                            <li>Birth date : 4th of July 1998</li>
-                            <li>Living near Grenoble, France</li>
-                            <li>Web and mobile developer</li>
-                        </ul>
-                </div>
-            </div>
-            <div class="containers">
-                <div class="textblock">
-                    <span class="fab fa-readme sectionicon"></span>
-                    <h2>Qualifications/Diplomas</h2>
-                    <p>These are french qualifications and diplomas. Please note that some of them don't have international equivalents.</p>
-                    <hr>
-                    <p>
-                        <ul>
-                            <li>Current - Degree in embedded systems and mobile phone programming</li>
-                            <li>2018 - BTS SNIR (Diploma in information technology and networking)</li>
-                            <li>2016 - Engineering baccalaureate</li>
-                        </ul>
-                </div>
-            </div>
-            <div class="containers">
-                <div class="textblock">
-                    <span class="fas fa-briefcase sectionicon"></span>
-                    <h2>Professional experience</h2>
-                    <p>These are the places where I've worked at (and are relevant to my skills).</p>
-                    <hr>
-                    <p>
-                        <ul>
-                            <li>Current - Prospectiva - Web developer (Symfony 2 and 3)</li>
-                            <li>2017 - Enigmatic - Web developer (Symfony 2)</li>
-                        </ul>
-                </div>
-            </div>
-            <div class="containers">
-                <div class="textblock">
-                    <span class="fas fa-project-diagram sectionicon"></span>
-                    <h2>Other projects</h2>
-                    <p>Things I've done or do in my free time.</p>
-                    <hr>
-                    <p>
-                        <ul>
-                            <li>Game creation with Unreal Engine 4</li>
-                            <li>Chat bot for Discord using Node.js and Discord.js</li>
-                        </ul>
-                </div>
-            </div>
-            <div class="containers">
-                <div class="textblock">
-                    <span class="fas fa-sun sectionicon"></span>
-                    <h2>Weather</h2>
-                    <p>Because... Well, why not?</p>
-                    <p>(Please avoid reloading too often, I have limited calls to the weather API)</p>
-                    <hr>
-                    <p id="weather-info">
-                        <p id="weather-loading">
-                            Loading...
-                        </p>
-                        <p id="weather-loaded" hidden>
-                            Weather for your location : <span id="location-city"></span>, <span id="location-country"></span>.<br>
-                            <span id="weather"></span>, and the temperature is <span id="temperature"></span>°C.
-                        </p>
-                </div>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio</title>
+    <link rel="icon" href="./img/favicon.png"/>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="light intro">
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a>
+        to improve your experience.</p>
+    <![endif]-->
+    <button type="button" id="switch-mode" class="btn light"><span id="switch-icon" class="fas fa-moon"></span><span
+            id="switchtext"> Dark mode</span></button>
+    <button type="button" id="back-top" class="btn light hidden"><span class="fas fa-arrow-up"></span> Back to top</button>
+    <div id="box" class="light">
+        <div class="containers">
+            <div class="textblock">
+                <span class="fab fa-wolf-pack-battalion sectionicon"></span>
+                <h1>Hello there! I'm Liam Powell, a mobile and web developer.</h1>
+                <p>This is my portfolio. You'll find information about me there.</p>
+                <p><img id="picture" src="img/picture.png" alt="This is me." class="light intro"></p>
             </div>
         </div>
-        <div>
-            © Liam Powell, 2018.
+        <div class="containers">
+            <div class="textblock">
+                <span class="fas fa-user-circle sectionicon"></span>
+                <h2>Personal info</h2>
+                <p>General info about me.</p>
+                <hr>
+                <p>
+                <ul>
+                    <li>Birth date : 4th of July 1998</li>
+                    <li>Living near Grenoble, France</li>
+                    <li>Web and mobile developer</li>
+                </ul>
+            </div>
         </div>
-        <script src="js/scripts.js" async defer></script>
-    </body>
+        <div class="containers">
+            <div class="textblock">
+                <span class="fab fa-readme sectionicon"></span>
+                <h2>Qualifications/Diplomas</h2>
+                <p>These are french qualifications and diplomas. Please note that some of them don't have international
+                    equivalents.</p>
+                <hr>
+                <p>
+                <ul>
+                    <li>Current - Degree in embedded systems and mobile phone programming</li>
+                    <li>2018 - BTS SNIR (Diploma in information technology and networking)</li>
+                    <li>2016 - Engineering baccalaureate</li>
+                </ul>
+            </div>
+        </div>
+        <div class="containers">
+            <div class="textblock">
+                <span class="fas fa-briefcase sectionicon"></span>
+                <h2>Professional experience</h2>
+                <p>These are the places where I've worked at (and are relevant to my skills).</p>
+                <hr>
+                <p>
+                <ul>
+                    <li>Current - Prospectiva - Web developer (Symfony 2 and 3)</li>
+                    <li>2017 - Enigmatic - Web developer (Symfony 2)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="containers">
+            <div class="textblock">
+                <span class="fas fa-project-diagram sectionicon"></span>
+                <h2>Other projects</h2>
+                <p>Things I've done or do in my free time.</p>
+                <hr>
+                <p>
+                <ul>
+                    <li>Game creation with Unreal Engine 4</li>
+                    <li>Chat bot for Discord using Node.js and Discord.js</li>
+                </ul>
+            </div>
+        </div>
+        <div class="containers">
+            <div class="textblock">
+                <span class="fas fa-sun sectionicon"></span>
+                <h2>Weather</h2>
+                <p>Because... Well, why not?</p>
+                <p>(Please avoid reloading too often, I have limited calls to the weather API)</p>
+                <hr>
+                <p id="weather-info">
+                <p id="weather-loading">
+                    Loading...
+                </p>
+                <p id="weather-loaded" hidden>
+                    Weather for your location : <span id="location-city"></span>, <span id="location-country"></span>.<br>
+                    <span id="weather"></span>, and the temperature is <span id="temperature"></span>°C.
+                </p>
+            </div>
+        </div>
+    </div>
+    <p>
+        © Liam Powell, 2018.
+    </p>
+    <script src="js/scripts.js" async defer></script>
+</body>
 </html>

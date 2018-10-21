@@ -10,9 +10,9 @@ function switchTheme(element) {
 
 $(function () {
         if ($(window).scrollTop() === 0) {
-            $("#backtop").addClass("hidden");
+            $("#back-top").addClass("hidden");
         } else {
-            $("#backtop").removeClass("hidden");
+            $("#back-top").removeClass("hidden");
         }
         $.getJSON('https://json.geoiplookup.io/', function (data) {
             $.ajax({
@@ -33,7 +33,7 @@ $(function () {
     }
 );
 
-$("#switchmode").click(function () {
+$("#switch-mode").on("click" ,function () {
     switchTheme($("#box"));
     switchTheme($("#picture"));
     switchTheme($("body"));
@@ -42,27 +42,27 @@ $("#switchmode").click(function () {
         switchTheme($(this));
     });
 
-    if ($("#switchmode").hasClass("light")) {
-        $("#switchtext").text(" Dark mode");
-        $("#switchicon").removeClass("fa-sun");
-        $("#switchicon").addClass("fa-moon");
+    if ($("#switch-mode").hasClass("light")) {
+        $("#switch-text").text(" Dark mode");
+        $("#switch-icon").removeClass("fa-sun");
+        $("#switch-icon").addClass("fa-moon");
     } else {
-        $("#switchtext").text(" Light mode");
-        $("#switchicon").removeClass("fa-moon");
-        $("#switchicon").addClass("fa-sun");
+        $("#switch-text").text(" Light mode");
+        $("#switch-icon").removeClass("fa-moon");
+        $("#switch-icon").addClass("fa-sun");
     }
 });
 
-$("#backtop").click(function () {
+$("#back-top").on("click", function () {
     $('html, body').animate({
         scrollTop: 0
     }, 1000);
 });
 
-$(window).scroll(function () {
+$(window).on("scroll" ,function () {
     if ($(window).scrollTop() === 0) {
-        $("#backtop").addClass("hidden");
+        $("#back-top").addClass("hidden");
     } else {
-        $("#backtop").removeClass("hidden");
+        $("#back-top").removeClass("hidden");
     }
 });
