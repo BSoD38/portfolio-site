@@ -2,9 +2,13 @@ function switchTheme(element) {
     if (element.hasClass("light")) {
         element.removeClass("light");
         element.addClass("dark");
+        document.title = "Good evening!";
+        document.cookie = "night";
     } else {
         element.removeClass("dark");
         element.addClass("light");
+        document.title = "Good day!";
+        document.cookie = "day";
     }
 }
 
@@ -30,6 +34,19 @@ $(function () {
                 }
             })
         });
+        if(document.cookie === "night")
+        {
+            switchTheme($("#box"));
+            switchTheme($("#picture"));
+            switchTheme($("body"));
+        } else if (document.cookie.length === 0) {
+            let hour = new Date().getHours();
+            if(hour >= 18 || hour <= 5){
+                switchTheme($("#box"));
+                switchTheme($("#picture"));
+                switchTheme($("body"));
+            }
+        }
     }
 );
 
