@@ -4,8 +4,7 @@ $lightmode-shade1: rgb(180, 180, 180);
 $lightmode-shade2: rgb(235, 235, 235);
 
 @font-face {
-  font-family: ankeFont;
-  src: url(../webfonts/Anke.woff2);
+  font-family: 'Rubik', sans-serif;
 }
 
 @keyframes flash {
@@ -18,7 +17,7 @@ $lightmode-shade2: rgb(235, 235, 235);
 }
 
 body {
-  font-family: ankeFont, serif;
+  font-family: Rubik, sans-serif;
   -webkit-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s;
 }
