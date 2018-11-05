@@ -77,6 +77,12 @@ li {
   bottom: 10px;
 }
 
+#change-lang {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+}
+
 #back-top.hidden {
   transform: translateY(70px);
   filter: blur(30px);
@@ -141,7 +147,7 @@ body.dark {
 }
 
 .btn.light:hover {
-  background-color: $darkmode-shade1;
+  background-color: $darkmode-shade2;
 }
 
 .btn.dark {
@@ -150,7 +156,7 @@ body.dark {
 }
 
 .btn.dark:hover {
-  background-color: $lightmode-shade1;
+  background-color: $lightmode-shade2;
 }
 
 .sectionicon {

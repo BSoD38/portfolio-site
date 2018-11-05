@@ -15,96 +15,92 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/lang.js"></script>
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
 </head>
 <body class="light intro">
     <!--[if lt IE 7]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a>
-        to improve your experience.</p>
+    <p class="browsehappy">Your browser is old as balls. Could you please stop using Internet Explorer, or upgrade Windows XP?</p>
     <![endif]-->
-    <button type="button" id="switch-mode" class="btn light"><span id="switch-icon" class="fas fa-moon"></span><span
-            id="switch-text"> Dark mode</span></button>
-    <button type="button" id="back-top" class="btn light hidden"><span class="fas fa-arrow-up"></span> Back to top</button>
+    <button type="button" id="switch-mode" class="btn light menus"><span id="switch-icon" class="fas fa-moon"></span><span id="switch-text"> Dark mode</span></button>
+    <button type="button" id="back-top" class="btn light hidden menus"><span class="fas fa-arrow-up"></span> Back to top</button>
+    <button type="button" id="change-lang" class="btn light hidden en menus">Français</button>
     <div id="box" class="light">
         <div class="containers">
-            <div class="textblock">
+            <div class="textblock" id="intro">
                 <span class="fab fa-wolf-pack-battalion sectionicon"></span>
-                <h1>Hello there! I'm Liam Powell, a mobile and web developer.</h1>
-                <p>This is my portfolio. You'll find information about me there.</p>
+                <h1 class="title">Hello there! I'm Liam Powell, a mobile and web developer.</h1>
+                <p class="subtitle">This is my portfolio. You'll find information about me there.</p>
                 <p><img id="picture" src="img/picture.png" alt="This is me." class="light intro"></p>
             </div>
         </div>
         <div class="containers">
-            <div class="textblock">
+            <div class="textblock" id="personal">
                 <span class="fas fa-user-circle sectionicon"></span>
-                <h2>Personal info</h2>
-                <p>General info about me.</p>
+                <h2 class="title">Personal info</h2>
+                <p class="subtitle">General info about me.</p>
                 <hr>
-                <p>
                 <ul>
-                    <li>Birth date : 4th of July 1998</li>
-                    <li>Living near Grenoble, France</li>
-                    <li>Web and mobile developer</li>
+                    <li class="text1">Birth date : 4th of July 1998</li>
+                    <li class="text2">Living near Grenoble, France</li>
+                    <li class="text3">Web and mobile developer</li>
                 </ul>
             </div>
         </div>
         <div class="containers">
-            <div class="textblock">
+            <div class="textblock" id="qualifications">
                 <span class="fab fa-readme sectionicon"></span>
-                <h2>Qualifications/Diplomas</h2>
-                <p>These are french qualifications and diplomas. Please note that some of them don't have international
+                <h2 class="title">Qualifications/Diplomas</h2>
+                <p class="subtitle">These are french qualifications and diplomas. Please note that some of them don't have international
                     equivalents.</p>
                 <hr>
-                <p>
                 <ul>
-                    <li>Current - Degree in embedded systems and mobile phone programming</li>
-                    <li>2018 - BTS SNIR (Diploma in information technology and networking)</li>
-                    <li>2016 - Engineering baccalaureate</li>
+                    <li class="text1">Current - Degree in embedded systems and mobile phone programming</li>
+                    <li class="text2">2018 - BTS SNIR (Diploma in information technology and networking)</li>
+                    <li class="text3">2016 - Engineering baccalaureate</li>
                 </ul>
             </div>
         </div>
         <div class="containers">
-            <div class="textblock">
+            <div class="textblock" id="experience">
                 <span class="fas fa-briefcase sectionicon"></span>
-                <h2>Professional experience</h2>
-                <p>These are the places where I've worked at (and are relevant to my skills).</p>
+                <h2 class="title">Professional experience</h2>
+                <p class="subtitle">These are the places where I've worked at (and are relevant to my skills).</p>
                 <hr>
-                <p>
                 <ul>
-                    <li>Current - Prospectiva - Web developer (Symfony 2 and 3)</li>
-                    <li>2017 - Enigmatic - Web developer (Symfony 2)</li>
+                    <li class="text1">Current - Prospectiva - Web developer (Symfony 2 and 3)</li>
+                    <li class="text2">2017 - Enigmatic - Web developer (Symfony 2)</li>
                 </ul>
             </div>
         </div>
         <div class="containers">
-            <div class="textblock">
+            <div class="textblock" id="projects">
                 <span class="fas fa-project-diagram sectionicon"></span>
-                <h2>Other projects</h2>
-                <p>Things I've done or do in my free time.</p>
+                <h2 class="title">Other projects</h2>
+                <p class="subtitle">Things I've done or do in my free time.</p>
                 <hr>
-                <p>
                 <ul>
-                    <li>Game creation with Unreal Engine 4</li>
-                    <li>Chat bot for Discord using Node.js and Discord.js</li>
+                    <li class="text1">Game creation with Unreal Engine 4</li>
+                    <li class="text2">Chat bot for Discord using Node.js and Discord.js</li>
                 </ul>
             </div>
         </div>
         <div class="containers">
-            <div class="textblock">
+            <div class="textblock" id="weather">
                 <span class="fas fa-sun sectionicon"></span>
-                <h2>Weather</h2>
-                <p>Because... Well, why not?</p>
-                <p>(Please avoid reloading too often, I have limited calls to the weather API)</p>
+                <h2 class="title">Weather</h2>
+                <p class="subtitle">Because... Well, why not?</p>
+                <p class="subtitle2">(Please avoid reloading too often, I have limited calls to the weather API)</p>
                 <hr>
                 <p id="weather-info">
                 <p id="weather-loading">
                     Loading...
                 </p>
                 <p id="weather-loaded" hidden>
-                    Weather for your location : <span id="location-city"></span>, <span id="location-country"></span>.<br>
-                    <span id="weather"></span>, and the temperature is <span id="temperature"></span>°C.
+                    <span class="text1">Weather for your location : </span><span id="location-city" class="not-text"></span>, <span id="location-country" class="not-text"></span>.<br>
+                    <span id="weather-data"></span><span class="text2">, and the temperature is </span><span id="temperature" class="not-text"></span>°C.
                 </p>
             </div>
         </div>
