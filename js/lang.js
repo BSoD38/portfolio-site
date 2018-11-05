@@ -38,7 +38,6 @@ const en =
         "text2": ", and the temperature is "
     },
     "menus": {
-        "switch-text": " Dark mode",
         "back-top": " Back to top",
         "change-lang": "Français"
     }
@@ -84,7 +83,6 @@ const fr =
         "text2": ", et la température est de "
     },
     "menus": {
-        "switch-text": " Mode sombre",
         "back-top": " Retourner en haut",
         "change-lang": "English"
     }
